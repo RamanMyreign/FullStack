@@ -1,33 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical-7</title>
     <style>
-        
+        * {
+            font-family: sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            background-color: rgb(197, 134, 134);
+        }
+
+        .sub-container {
+            background-color: white;
+            margin: 15px;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            color: white;
+            font-size: 35px;
+            background-color: rgb(80, 80, 145);
+            text-align: center;
+            height: 70px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+            height: 750px;
+            margin: 15px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+
+        .section1 {
+            font-size: 45px;
+            margin: 15px;
+            text-align: center;
+
+        }
+
+        .section1:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            background-color: orange;
+            display: block;
+            float: left;
+            height: 300px;
+            width: 300px;
+            margin-top: 15px;
+            margin: 30px;
+            border-radius: 55%;
+        }
+
+        .section2 {
+            text-align: center;
+            font-size: 45px;
+            margin: 15px;
+
+        }
+
+        .section2:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+        .left-content {
+            margin: 15px;
+            width: 60%;
+            background-color: rgb(247, 247, 92);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            float: left;
+
+        }
+
+        .right-content {
+            /* margin: 15px; */
+            width: 35%;
+            float: right;
+            height: 400px;
+
+        }
+
+        .article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 93%;
+            height: 31%;
+            background-color: rgb(175, 250, 156);
+            margin: 15px;
+        }
+
+        .section3 {
+            font-size: 45px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .section3:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .sec3 {
+            background-color: orange;
+            display: block;
+            float: left;
+            height: 300px;
+            width: 300px;
+            margin-top: 15px;
+            margin-left: 40px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+
+        }
+
+        .section4 {
+            margin: 15px;
+            font-size: 45px;
+            text-align: center;
+
+        }
+
+        .footer {
+            background-color: rgb(163, 50, 163);
+            color: floralwhite;
+            font-size: 40px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="header">Header</div>
-        <div class="banner">Banner</div>
-        <div class="section1">Section 1</div>
-        <div class="section2">Section 2
-            <div class="left-content">
-                main content
+        <div class="sub-container">
+            <div class="header">
+                <p><b>Header</b></p>
             </div>
-            <div class="right-content">
-                right-content
-                <div>Article 1</div>
-                <div>Article 2</div>
-                <div>Article 3</div>
+            <div class="banner"><b>Banner</b></div>
+            <div class="section1">
+                <p><b>Section 1</b></p>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="section2">
+                <p><b>Section 2</b></p>
+                <div class="left-content">
+                    Main Content
+                </div>
+                <div class="right-content">
+                    <div class="article">Article 1</div>
+                    <div class="article">Article 2</div>
+                    <div class="article">Article 3</div>
+                </div>
+            </div>
+
+            <div class="section3">
+                <p><b>Section 3</b></p>
+                <div class="sec3"></div>
+                <div class="sec3"></div>
+                <div class="sec3"></div>
+                <div class="sec3"></div>
+            </div>
+            <div class="section4">
+                <p><b>Section 4</b></p>
+                <div class="footer">
+                    <p><b>Footer</b></p>
+                </div>
             </div>
         </div>
 
-        <div class="section3">Section 3</div>
-        <div class="section4">Section 4</div>
-        
+
     </div>
 </body>
+
 </html>

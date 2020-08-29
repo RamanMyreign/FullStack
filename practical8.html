@@ -15,39 +15,72 @@
         .container {
             margin: 0px 15px;
         }
-
-        .nav-bar {
+        .nav-bar{
             background-color: grey;
             height: 70px;
-            width: 100%;
             position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
             z-index: 10;
         }
-
-        .nav-link {
+        .nav-bar h2{
+            line-height: 70px;
+        }
+        .nav-link{
+            line-height: 70px;
+            font-size: 30px;
+            margin: 0px 40px;
             display: inline-block;
-            margin-left: 100px;
+            position: relative;
+            
         }
 
-        .nav-link a {
-            display: block;
+        .nav-link a{
             text-decoration: none;
-            font-size: 40px;
             color: white;
-            margin-top: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
+            transition: .8s;
+            padding: 8px 15px;
         }
-
-        .nav-link a:hover {
-            background-color: white;
-            color: blue;
-            margin-top: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-            /* padding-top: 15px; */
+        .nav-link a:hover{
+            background-color: yellow;
+            color: black;
+            transition: .4s;
         }
+        .nav-bar li:hover .submenu li{
+            display: block;
+            transition: .4s;
 
+        }
+        .submenu{
+            position: absolute;
+            
+        }
+        .submenu li a{
+            display: block;
+        }
+        .submenu li{
+            display: none;
+            text-align: center;
+            font-size: 25px;
+            background-color: grey;
+            color: white;
+            width: 150px;
+            left: 0;
+        }
+        .submenu2{
+            position: absolute;
+            width: 150px;
+            left: 100%;
+            top: 10px;
+            display: none;
+        }
+        .submenu li:hover .submenu2{
+            display: block;
+            transition: .4s;
+
+        }
 
         .banner img {
             margin-top: 130px;
@@ -201,11 +234,31 @@
 <body>
     <div class="container">
         <div class="nav-bar" >
-            <ul style="width: 100%;">
-                <li class="nav-link"><a href="./index.html">Home</a></li>
+            <h2>Beta-Labs</h2>
+            <ul>
+                <li class="nav-link" ><a href="./index.html">Home</a></li>
                 <li class="nav-link"><a href="#about-us">About Us</a></li>
                 <li class="nav-link"><a href="#team-members">Team</a></li>
-                <li class="nav-link"><a href="#technologies">Technologies</a></li>
+                <li class="nav-link"><a href="#technologies">Technologies</a>
+                    <ul class="submenu">
+                        <li class=""><a href="#">Front-End</a>
+                            <ul class="submenu2" >
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JAVASCRIPT</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class=""><a href="#">Back-End</a>
+                        <ul class="submenu2">
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">NodeJS</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">JAVA</a></li>
+                            <!-- <li><a href="#"></a></li> -->
+                        </ul></li>
+                    </ul>
+                </li>
                 <li class="nav-link"><a href="#contact">Contact</a></li>
             </ul>
         </div>

@@ -5,10 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raman Live-Webpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        * {
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        table {
+            width: 80%;
+            margin-top: 15px;
+            border-collapse: collapse;
+            border: 4px solid black;
+            background-color: rgb(197, 214, 214);
+
+        }
+
+        tr {
+            border-top: 2px solid rgb(235, 229, 229);
+        }
+
+        tr:hover {
+            background-color: rgb(241, 232, 232);
+        }
+
+        caption {
+            background-color: rgb(14, 14, 66);
+            height: 55px;
+        }
+
+        caption b {
+            font-size: 25px;
+            text-align: center;
+            line-height: 55px;
+            color: white;
+        }
+
+        th,
+        td {
+            padding: 15px 15px;
+        }
+
+        td i {
+            /* margin-left: 10px; */
+            padding-top: 10px;
+            padding-left: 15px;
+            color: rgb(128, 114, 114);
+        }
+
+        table a {
+            text-decoration: none;
+            color: rgb(113, 121, 121);
+        }
+
+        table a:hover {
+            color: rgb(11, 15, 15);
+        }
+
+        td span {
+            color: rgb(10, 128, 10);
+        }
+
+        td i:hover {
+            color: blue;
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltiptext {
+            width: 60px;
+            font-size: 14px;
+            visibility: hidden;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 4px 0;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            position: absolute;
+            top: 30px;
+            z-index: 1;
+
+        }
+
+        td i:hover .tooltiptext {
+            visibility: visible;
+
+        }
+    </style>
 </head>
 
-<body style="background-color: rgb(179, 241, 128); padding-left: 40px ; padding-right: 40px;">
-    <h1 style="color: rgb(100, 8, 8); font-family: Arial, Helvetica, sans-serif; text-align: center; font-size: 40px;">
+<body style="background-color: rgb(255, 216, 144); padding-left: 40px ; padding-right: 40px;">
+    <h1
+        style="background-color: rgb(181, 208, 233); width: 45%; margin: auto; border-radius: 10px;
+        color: rgb(100, 8, 8);text-align: center; font-size: 40px; height: 90px; line-height: 90px; border-top: 6px solid; border-left: 6px solid;">
         Welcome to Full Stack Course
     </h1>
     <h2 style="color: blue;">About Me</h2>
@@ -24,22 +118,106 @@
         portion of webpage site production as opposed to the database or server-side programming. It encompasses
         everything from building a simple page of HTml to creating a complex website.</p>
     <br>
-    <h1 style="color: rgb(95, 20, 20);">List Of Practicals</h1>
-    <p>1. Create a Web page including HTML basic skeleton using:
-        HTML Editor and
-        Online Sandbox Environment. <a href="./practical1.html">Practical 1</a></p>
-    <p>2. Live your First Web-Page on Git-Hub. <a href="./practical2.html">Practical 2</a></p>
-    <p>3. Create a web page showing a basic html structure using character Entities and span Tag. <a
-            href="./practical3.html">Practical 3</a> </p>
-    <p>4. Create a website having list of all practical and their individual practical Page links . <a
-            href="./practical4.html">Practical 4</a> </p>
-    <p>5. Create a Web-Page showing the use of Image-Map in the Web Application. <a href="./practical5.html">Practical 5</a></p>
-    <p>6. Create following layout using CSS layout properties. <a href="./practical6.html">Practical 6</a></p>
-    <p>7. Create a Web Page Layout using div tags. <a href="./practical7.html">Practical 7</a></p>
-    <p>8. Create a Web Page having Fixed Navigation Bar with the given content. <a href="./practical8.html">Practical 8</a></p>
-    <p>9. Create a Responsive Web Layout with Responsive Navigation Bar. <a href="./practical9.html">Practical 9</a></p>
-    <p>10. Create a Responsive Side-Bar Navigation Menu. <a href="./practical10.html">Practical 10</a></p>
-
+    <table align="center">
+        <caption><span><b>Fullstack Live Practical Book</b></span></caption>
+        <tr style=" text-align:left; border-bottom: 3px solid rgb(235, 229, 229);">
+            <th>#</th>
+            <th>Practical Names</th>
+            <th>Link</th>
+            <th>Status</th>
+            <th>Tools</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td width="750px">Create a Web page including HTML basic skeleton using:
+                HTML Editor and
+                Online Sandbox Environment.</td>
+            <td width="110px"><a href="./practical1.html">Practical-1</a></td>
+            <td width="100px"><span>Checked</span></td>
+            <td width="90px"><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Live your First Web-Page on Git-Hub.</td>
+            <td><a href="./practical2.html">Practical-2</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Create a web page showing a basic html structure using character Entities and span Tag.</td>
+            <td><a href="./practical3.html">Practical-3</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i>
+                <i class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Create a website having list of all practical and their individual practical Page links .</td>
+            <td><a href="./practical4.html">Practical-4</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+            <td><a href="./practical5.html">Practical-5</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Create following layout using CSS layout properties.</td>
+            <td><a href="./practical6.html">Practical-6</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Create a Web Page Layout using div tags.</td>
+            <td><a href="./practical7.html">Practical-7</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Create a Web Page having Fixed Navigation Bar with the given content.</td>
+            <td><a href="./practical8.html">Practical-8</a></td>
+            <td><span>Checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+            <td><a href="./practical9.html">Practical-9</a></td>
+            <td><span style="color: red;">Un-checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td> Create a Responsive Side-Bar Navigation Menu.</td>
+            <td><a href="./practical10.html">Practical-10</a></td>
+            <td><span style="color: red;">Un-checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td> Create a Table that represent Live Practical Book Records.</td>
+            <td><a href="./practical1.html">Practical-11</a></td>
+            <td><span style="color: red;">Un-checked</span></td>
+            <td><i class="fa fa-pencil fa-lg tooltip"><span class="tooltiptext">Edit</span></i><i
+                    class="fa fa-trash fa-lg tooltip"><span class="tooltiptext">Delete</span></i></td>
+        </tr>
+    </table>
 
 
 </body>

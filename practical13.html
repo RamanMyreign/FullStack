@@ -7,59 +7,96 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
-        footer{
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            height: 70px;
+        }
+        .main h1{
+            margin-top: 20px;
+            font-size: 40px;
+            color: rgb(158, 144, 144);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        footer {
             background-color: rgb(34, 30, 30);
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(165, 150, 150);
+            /* font-size: 15px; */
 
         }
-        
+
         .footer-main:after {
             content: '';
             display: block;
             clear: both;
         }
-        .foot-1{
+
+        .foot-1 {
             color: white;
             display: block;
             float: left;
-            width: 45%;
-            /* margin-left: 10px; */
+            width: 38%;
+            margin-top: 25px;
+            margin-right: 25px;
+            margin-left: 10px;
         }
-        .foot-1 p{
+
+        .foot-1 p {
             color: rgb(138, 113, 113);
-        }
-        .foot-2{
-            color: white;
-            display: block;
-            float: left;
-            width: 16%;
-            /* margin-left: 20px; */
-            /* border: 5px solid red; */
+            padding-right: 10px;
+            text-align: justify;
             
         }
-        .foot-2 ul li {
-            list-style: none;
-            padding: 3px 0px;
+
+        .foot-2 {
+            color: white;
+            display: block;
+            float: left;
+            width: 18%;
+            margin-top: 25px;
 
         }
-        .foot-2 h3{
-            margin-left: 35px;
+
+        .foot-2 ul li {
+            list-style: none;
+            padding: 5px 5px;
+            color: rgb(165, 150, 150);
+
+
         }
-        .foot-2 a{
+
+        .foot-2 h3,
+        .foot-1 h3 {
+            margin-bottom: 10px;
+        }
+
+        .foot-2 a {
             text-decoration: none;
             color: rgb(165, 150, 150);
             font-size: 15px;
-            
+
         }
-        .foot-3{
-                border-top: 2px solid white;
-                border-bottom: 2px solid white;
-                text-align: center;
-                font-size: 18px;
+
+        .foot-2 a:hover {
+            color: yellow
         }
-        .foot-3 a{
-            background-color: rgb(255, 71, 71);
+
+        .foot-3 {
+            border-top: 2px solid rgba(255, 255, 255, .1);
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+            text-align: center;
+            /* height: 120px; */
+            padding: 25px 0px;
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .foot-3 a {
+            background-color: rgb(253, 28, 28);
             border-radius: 18px;
             font-size: 16px;
             margin-left: 8px;
@@ -70,12 +107,121 @@
             line-height: 40px;
             width: 100px;
         }
+
+        .foot-4 {
+            text-align: center;
+        }
+
+        .foot-4 .fa {
+            font-size: 35px;
+            padding: 20px;
+            text-align: center;
+            width: 30px;
+            color: white;
+            border-radius: 50%;
+            margin: 40px 15px;
+            background-color: rgb(70, 64, 64);
+            transition: .2s;
+            
+        }
+
+        .foot-4 .fa-facebook:hover {
+            background-color: blue;
+        }
+
+        .foot-4 .fa-twitter:hover {
+            background-color: rgb(50, 160, 204);
+        }
+
+        .foot-4 .fa-google-plus:hover {
+            background-color: red;
+        }
+
+        .foot-4 .fa-linkedin:hover {
+            background-color: rgb(5, 87, 119);
+        }
+
+        .foot-4 .fa-dribbble:hover {
+            background-color: rgb(238, 117, 137);
+        }
+
+        .foot-5 {
+            background-color: black;
+            height: 80px;
+
+        }
+
+        .foot-5 p {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 5px;
+        }
+
+        .k {
+            visibility: hidden;
+            transition: .3s;
+
+        }
+
+        .foot-5 p:hover~.k {
+            visibility: visible;
+
+        }
+
+
+        @media (max-width: 800px) {
+            .foot-1 {
+                width: 100%;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+
+            .foot-2 {
+                width: 28%;
+                float: left;
+            }
+        }
+
+        @media(max-width: 550px) {
+            .foot-2 {
+                width: 100%;
+                float: none;
+                margin-left: 20px;
+                /* margin-top: 20px; */
+            }
+
+            .foot-4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .foot-4 .fa {
+                width: 15px;
+                font-size: 20px;
+                margin: 20px 10px;
+                padding: 20px;
+                float: left;
+
+            }
+
+            .foot-4::after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="main">
+        <h1>Content Area</h1>
+    </div>
     <footer>
-        <div class="footer-main" style="margin-left: 20px;">
+        <div class="footer-main">
             <div class="foot-1">
                 <h3><b>ABOUT</b></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil doloribus mollitia, quidem cupiditate
@@ -84,7 +230,7 @@
                     facilis quam neque accusamus quibusdam, dolorum doloremque libero voluptatibus a facere quia
                     inventore temporibus ipsa aliquid! Architecto, ducimus reiciendis!</p>
             </div>
-            <div class="foot-2">
+            <div class="foot-2" style="margin-left: 20px;">
                 <h3><b>CATEGORIES</b></h3>
                 <ul>
                     <li class="link"><a href="#">C</a></li>
@@ -109,22 +255,30 @@
             <div class="foot-2">
                 <h3><b>CONTACT US</b></h3>
                 <ul>
-                    <li class="link"><a href="#"><i></i>SCO-75 Chandigarh, Inida</a></li>
-                    <li class="link"><a href="#">betalabsindia@gmail.com</a></li>
-                    <li class="link"><a href="#">Mobile: 9260978693</a></li>
-                    <li class="link"><a href="#">betalabsindia</a></li>
-                    
+                    <li class="link"><i class="fa fa-home"> </i> SCO-75 Chandigarh, Inida</li>
+                    <li class="link"><i class="fa fa-envelope"></i> betalabsindia@gmail.com</li>
+                    <li class="link"><i class="fa fa-phone-square"></i> Mobile: 9260978693</li>
+                    <li class="link"><a href="#"><i class="fa fa-facebook-square"></i> betalabsindia</a></li>
+
                 </ul>
             </div>
+
         </div>
         <div class="foot-3">
-            <p>Register For Free  <a href="#">signUp!</a></p>
+            <p>Register for Free <a href="#">signUp!</a></p>
         </div>
         <div class="foot-4">
-            
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+        <div class="foot-5">
+            <p>Copyright &copy; 2020 All Rights Reserved by Beta-Labs.</p>
+            <div class="k" style="border-top: 2px solid yellow; width: 370px; margin: auto;"></div>
         </div>
 
-   
     </footer>
 </body>
 

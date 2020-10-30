@@ -14,7 +14,7 @@
             font-size: 50px;
             margin-top: 50px;
         }
-        #btn{
+        #btn-plus, #btn-minus{
             background-color: yellow;
             height: 50px;
             width: 70px;
@@ -22,11 +22,11 @@
             margin-right: 50px;
             margin-left: 50px;
         }
+      
         .button{
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid green;
         }
         p{
             font-size: 45px;
@@ -37,9 +37,28 @@
 <body>
     <h1>COUNTER</h1>
     <div class="button" >
-        <button id="btn-minus">-</button>
+        <button id="btn-minus" disabled onclick="Counter_minus()">-</button>
         <p>0</p>
-        <button id="btn-plus">+</button>
+        <button id="btn-plus" onclick="Counter_plus()">+</button>
     </div>
+    <script>
+        var x=0
+        function Counter_plus(){
+            x=x+1;
+            document.querySelector('p').textContent = x;
+            document.getElementById('btn-minus').disabled=false;
+            
+        }
+        function Counter_minus(){
+            if(x>0){
+            x=x-1
+            document.querySelector('p').textContent = x;
+            }
+            if(x==0){
+                document.getElementById('btn-minus').disabled='true';
+            }
+        }
+
+    </script>
 </body>
 </html>

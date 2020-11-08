@@ -7,9 +7,15 @@
     <title>Practical-16</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
-        body {
-            background-color: skyblue;
+        * {
+            font-family: Arial, Helvetica, sans-serif;
         }
+
+        body {
+            background-image: url('./img/nightview.jpg');
+            background-size: cover;
+            
+            }
 
         h1 {
             text-align: center;
@@ -46,7 +52,7 @@
         }
 
         #item-list {
-            margin-top: 50px;
+            margin-top: 100px;
         }
 
         #item {
@@ -54,15 +60,15 @@
             justify-content: center;
             align-items: center;
             margin: 8px;
-            /* margin-top: 5px; */
         }
 
         .li-item {
             display: block;
-            min-width: 25%;
-            width: 200px;
+            /* min-width: 25%; */
+            width: 250px;
+            text-overflow: none;
             list-style: none;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             font-size: 25px;
             padding: 0px 10px;
         }
@@ -88,10 +94,13 @@
             background-color: red;
             color: white;
         }
-        .fa-check, .fa-trash{
+
+        .fa-check,
+        .fa-trash {
             pointer-events: none;
         }
-        .completed{
+
+        .completed {
             text-decoration: line-through;
             opacity: .6;
         }
@@ -100,8 +109,8 @@
 
 <body>
     <h1>Fullstack To-do List</h1>
-    <form id="input">
-        <input type="text" class="todo-input">
+    <form id="input" name="myForm">
+        <input type="text" name="fname" class="todo-input">
         <button class="todo-btn"><i class="fa fa-plus-square"></i></button>
     </form>
     <div id="item-list">
@@ -109,9 +118,11 @@
     </div>
 
     <script>
+
         var input = document.querySelector(".todo-input");
         var inputBtn = document.querySelector(".todo-btn");
         var x = document.getElementById('item-list');
+
 
         inputBtn.onclick = createList;
         x.onclick = checkDelete;
@@ -119,35 +130,42 @@
 
         function createList(e) {
             e.preventDefault();
-            var newDiv = document.createElement("div");
-            newDiv.setAttribute("id", "item");
+            y = document.forms["myForm"]["fname"].value;
+            if( y == ""){
+                alert("Please enter some data");
+            }
+            else {
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("id", "item");
 
-            var newLi = document.createElement("li");
-            newLi.classList.add("li-item");
-            newLi.innerHTML = input.value;
+                var newLi = document.createElement("li");
+                newLi.classList.add("li-item");
+                newLi.innerHTML = input.value;
+                input.value = '';
+                newDiv.appendChild(newLi);
 
-            newDiv.appendChild(newLi);
+                var checkBtn = document.createElement("button");
+                checkBtn.classList.add("check-btn");
+                checkBtn.innerHTML = '<i class="fa fa-check"></i>';
+                newDiv.appendChild(checkBtn);
+                var deleteBtn = document.createElement("button");
+                deleteBtn.classList.add("delete-btn");
+                deleteBtn.innerHTML = '<i class="fa fa-trash"></i>';
+                newDiv.appendChild(deleteBtn);
+                // newDiv.innerHTML = '<br>';
 
-            var checkBtn = document.createElement("button");
-            checkBtn.classList.add("check-btn");
-            checkBtn.innerHTML = '<i class="fa fa-check"></i>';
-            newDiv.appendChild(checkBtn);
-            var deleteBtn = document.createElement("button");
-            deleteBtn.classList.add("delete-btn");
-            deleteBtn.innerHTML = '<i class="fa fa-trash"></i>';
-            newDiv.appendChild(deleteBtn);
-            // newDiv.innerHTML = '<br>';
 
-            x.appendChild(newDiv);
+                x.appendChild(newDiv);
+            }
 
         }
-        function checkDelete(e){
-            var event= e.target;
-            if(event.classList[0] === "delete-btn"){
+        function checkDelete(e) {
+            var event = e.target;
+            if (event.classList[0] === "delete-btn") {
                 var parent = event.parentNode;
                 parent.remove();
             }
-            if(event.classList[0] === "check-btn"){
+            if (event.classList[0] === "check-btn") {
                 var parent = event.parentNode;
                 parent.classList.toggle("completed");
             }

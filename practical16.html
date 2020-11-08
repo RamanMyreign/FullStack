@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-16</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 50px;
+        }
+
+        #input {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        form input {
+            width: 300px;
+            outline: none;
+            border: none;
+            font-size: 24px;
+            height: 30px;
+            background-color: white;
+        }
+
+        form button {
+            font-size: 22px;
+            background-color: white;
+            border: none;
+            height: 32px;
+            outline: none;
+        }
+
+        #item-list {
+            margin-top: 50px;
+        }
+
+        #item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 8px;
+            /* margin-top: 5px; */
+        }
+
+        .li-item {
+            display: block;
+            width: 250px;
+            list-style: none;
+            background-color: white;
+            font-size: 25px;
+            padding: 0px 10px;
+        }
+
+        .check-btn,
+        .delete-btn {
+            /* background-color: white; */
+            font-size: 20px;
+            border: none;
+            outline: none;
+            height: 28px;
+            /* padding: 2px 10px; */
+
+        }
+
+        .check-btn {
+            background-color: green;
+            color: white;
+
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+        }
+        .fa-check, .fa-trash{
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fullstack To-do List</h1>
+    <form id="input">
+        <input type="text" class="todo-input">
+        <button class="todo-btn"><i class="fa fa-plus-square"></i></button>
+    </form>
+    <div id="item-list">
+
+    </div>
+
+    <script>
+        var input = document.querySelector(".todo-input");
+        var inputBtn = document.querySelector(".todo-btn");
+        var x = document.getElementById('item-list');
+
+        inputBtn.onclick = createList;
+        x.onclick = checkDelete;
+
+
+        function createList(e) {
+            e.preventDefault();
+            var newDiv = document.createElement("div");
+            newDiv.setAttribute("id", "item");
+
+            var newLi = document.createElement("li");
+            newLi.classList.add("li-item");
+            newLi.innerHTML = input.value;
+
+            newDiv.appendChild(newLi);
+
+            var checkBtn = document.createElement("button");
+            checkBtn.classList.add("check-btn");
+            checkBtn.innerHTML = '<i class="fa fa-check"></i>';
+            newDiv.appendChild(checkBtn);
+            var deleteBtn = document.createElement("button");
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.innerHTML = '<i class="fa fa-trash"></i>';
+            newDiv.appendChild(deleteBtn);
+            // newDiv.innerHTML = '<br>';
+
+            x.appendChild(newDiv);
+
+        }
+        function checkDelete(e){
+            var event= e.target;
+            if(event.classList[0] === "delete-btn"){
+                var parent = event.parentNode;
+                parent.remove();
+            }
+            if(event.classList[0] === "check-btn"){
+                var parent = event.parentNode;
+                parent.classList.toggle;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -32,15 +32,16 @@
             outline: none;
             border: none;
             font-size: 24px;
-            height: 30px;
+            height: 40px;
             background-color: white;
+            padding: 0px 8px;
         }
 
         form button {
             font-size: 22px;
             background-color: white;
             border: none;
-            height: 32px;
+            height: 41px;
             outline: none;
         }
 
@@ -58,7 +59,8 @@
 
         .li-item {
             display: block;
-            width: 250px;
+            min-width: 25%;
+            width: 200px;
             list-style: none;
             background-color: white;
             font-size: 25px;
@@ -68,7 +70,7 @@
         .check-btn,
         .delete-btn {
             /* background-color: white; */
-            font-size: 20px;
+            font-size: 16px;
             border: none;
             outline: none;
             height: 28px;
@@ -88,6 +90,10 @@
         }
         .fa-check, .fa-trash{
             pointer-events: none;
+        }
+        .completed{
+            text-decoration: line-through;
+            opacity: .6;
         }
     </style>
 </head>
@@ -143,7 +149,7 @@
             }
             if(event.classList[0] === "check-btn"){
                 var parent = event.parentNode;
-                parent.classList.toggle;
+                parent.classList.toggle("completed");
             }
         }
     </script>

@@ -3,3 +3,28 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    justify-content: center;
+
+}
+
+#time {
+    font-size: 8rem;
+
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 3rem;
+    opacity: 0.5;
+}

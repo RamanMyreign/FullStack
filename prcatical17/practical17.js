@@ -29,16 +29,16 @@ function setGreeting() {
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundImage = 'url("./img/morning.jpg")';
         greeting.innerHTML = "Good Morning";
-        document.body.style.color = "white";
-
+        // document.body.style.color = "white";
+        
     } else if (hour < 18) {
         document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundImage = 'url("./img/afternoon.jpg")';
+        document.body.style.backgroundImage = 'url("./img/afernoon.jpg")';
         greeting.innerHTML = "Good Afternoon";
-
+        
     } else {
         document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundImage = 'url("./img/evening.jpg")';
+        document.body.style.backgroundImage = 'url("./img/eveningimg.jpg")';
 
         greeting.innerHTML = "Good Evening";
         document.body.style.color = "white";

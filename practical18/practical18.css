@@ -16,7 +16,7 @@ body{
 .heading{
     text-align: center;
     height: 70px;
-    background-color: rgb(230, 220, 220);
+    background-color: rgb(241, 233, 233);
     border: 2px solid white;
     margin-bottom: 40px;
    
@@ -51,6 +51,7 @@ body{
     font-size: 14px;
     padding: 4px 4px;
     outline: none;
+    border: 2px solid rgb(196, 187, 187);
 }
 
 .form-div button{
@@ -93,3 +94,4 @@ body{
     visibility: visible;
     color: red;
 }
+

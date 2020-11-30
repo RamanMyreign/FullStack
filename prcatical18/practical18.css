@@ -1,0 +1,97 @@
+body{
+    background-color: purple;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+}
+
+.container{
+    width: 450px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.heading{
+    text-align: center;
+    height: 70px;
+    background-color: rgb(241, 233, 233);
+    border: 2px solid white;
+    margin-bottom: 40px;
+   
+}
+.heading h1{
+    padding: 10px;
+    
+}
+.form-div{
+    /* border: 2px solid green; */
+    height: 88px;  
+    width: 85%;
+    margin: auto;
+    position: relative;
+
+}
+
+.form-div label{
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* margin-right: 30px; */
+
+}
+.form-div input{
+    height: 20px;
+    width: 97%;
+    margin: auto;
+    /* border: 2px solid green; */
+    /* margin-bottom: 5px; */
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 4px;
+    outline: none;
+    border: 2px solid rgb(196, 187, 187);
+}
+
+.form-div button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 4px;
+}
+.form-div i{
+    position: absolute;
+    right: 10px;
+    top: 38px;
+   
+    
+}
+.fa-check-circle{
+    color: green;
+    visibility: hidden;
+
+}
+.fa-exclamation-circle, small{
+    color: red;
+    visibility: hidden;
+}
+
+.form-div.success input{
+    border: 3px solid green;
+}
+.form-div.form-div.success .fa-check-circle{
+    visibility: visible;
+    color: rgb(27, 158, 27);
+}
+.form-div.error input{
+    border: 3px solid red;
+}
+.form-div.form-div.error .fa-exclamation-circle, small{
+    visibility: visible;
+    color: red;
+}
+

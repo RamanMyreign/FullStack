@@ -2,23 +2,25 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   body {
-    background-color: grey;
+    background-color: rgb(90, 74, 74);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  container {
+  
+  .container {
     width: 360px;
     background: white;
-    height: 50vh;
+    height: 60vh;
     border-radius: 10px;
     position: absolute;
     overflow: hidden;
+    font-size: 18px;
   }
   .p-row {
     width: 360px;
@@ -39,7 +41,7 @@
     width: 120px;
     height: 100%;
     position: absolute;
-    background-color: rgb(20, 180, 220);
+    background-color: red;
     transition: 0.4s;
   }
   
@@ -52,7 +54,7 @@
     border-bottom: 20px solid transparent;
     right: -20px;
     top: 0px;
-    border-left: 20px solid rgb(20, 180, 220);
+    border-left: 20px solid red;
   }
   
   #form-1 {
@@ -69,14 +71,16 @@
   h1 {
     margin-top: 20px;
     margin: 10px;
-    color: grey;
-    font-size: 30px;
+    color: rgb(56, 43, 43);
+    font-size: 35px;
   }
   .btn {
     height: 30px;
     width: 100px;
     margin: 10px;
-    background-color: rgb(20, 180, 220);
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: red;
     color: white;
     outline: none;
     border: none;

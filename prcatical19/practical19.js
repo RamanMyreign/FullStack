@@ -19,3 +19,14 @@ nextbtn2.onclick=()=>{
     form3.style.left = '0px';
     progress.style.width = '360px';
 };
+
+backbtn2.onclick = ()=>{
+    form2.style.left = '450px';
+    form1.style.left = '0px';
+    progress.style.width = '120px';
+};
+backbtn3.onclick = ()=>{
+    form2.style.left = '0px';
+    form3.style.left = '450px';
+    progress.style.width = '240px';
+};

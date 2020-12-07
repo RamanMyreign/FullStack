@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+
+        }
+        .nav div{
+            color: white;
+            margin-left: 50px;
+        }
+        .nav img{
+            background-color: black;
+            color: white;
+            line-height: 80px;
+        }
+        .logo span{
+            font-size: 35px;
+            /* border: 2px solid green; */
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: blue;
+            position: absolute;
+            left: 120px;
+            top: 15px;
+            
+        }
+        .nav .list-item{
+            position: absolute;
+            right: 10px;
+           
+        }
+
+        .nav ul {
+            margin-right: 50px;
+            line-height: 80px;
+        }
+
+        .nav ul li {
+            list-style: none;
+            display: inline;
+            margin: 16px 20px;
+            font-size: 25px;
+            padding: 4px 15px;
+            border: none;
+            border-top: 2px solid rgb(238, 45, 45);
+            border-left: 2px solid red;
+
+        }
+
+        .nav ul li a, span{
+            text-decoration: none;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .nav ul li a:hover {
+            color: red;
+            transition: 0.8s;
+        }
+
+        .sub-container {
+            height: 15vh;
+        }
+
+        /* Footer  */
+        .footer {
+            height: 400px;
+            background-color: black;
+        }
+
+        .foot-1 .fa {
+            font-size: 35px;
+            padding: 20px;
+            text-align: center;
+            width: 30px;
+            color: white;
+            border-radius: 50%;
+            margin: 40px 15px;
+            /* background-color: rgb(70, 64, 64); */
+            transition: .2s;
+        }
+
+        .foot-1 {
+            display: flex;
+            justify-content: center;
+            /* border-bottom: 1px solid rgb(155, 155, 155); */
+        }
+
+        .fa-facebook {
+            background-color: blue;
+        }
+
+        .fa-twitter {
+            background-color: rgb(50, 160, 204);
+        }
+
+        .fa-google-plus {
+            background-color: red;
+        }
+
+        .fa-linkedin {
+            background-color: rgb(5, 87, 119);
+        }
+
+        .fa-dribbble {
+            background-color: rgb(126, 9, 28);
+        }
+
+        .foot-1 .fa-facebook:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-twitter:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-google-plus:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-linkedin:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-dribbble:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-2 {
+            color: white;
+            width: 450px;
+            float: left
+        }
+
+        .foot-2 ul {
+            margin-left: 100px;
+        }
+
+        .foot-2 ul li {
+            list-style: none;
+            font-size: 15px;
+            padding: 4px 8px;
+
+        }
+
+        .foot-2 ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .foot-2 ul li a:hover {
+            color: red;
+        }
+
+        .foot-2 p {
+            padding-top: 100px;
+            padding-bottom: 5px;
+            width: 380px;
+            margin: auto;
+        }
+
+        .sub-container1 {
+            background-color: black;
+            color: white;
+            height: 600px;
+
+        }
+
+        .left-side {
+            padding-top: 70px;
+            /* border: 2px solid red; */
+            width: 600px;
+            margin-left: 150px;
+            float: left;
+        }
+        .left-side button{
+            width: 60px;
+            height: 28px;
+            margin: 20px 10px;
+            font-size: 17px;
+            color: white;
+        }
+        .right-side{
+            width: 600px;
+            float: left;
+            /* border: 2px solid red; */
+            margin-right: 100px;
+            height: 400px;
+        }
+        .right-side h1{
+            color: blue;
+            margin: 18px 0px;
+            text-align: center;
+        }
+        .right-side label{
+            /* border: 2px solid green; */
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .right-side input{
+            width: 400px;
+            height: 32px;
+            padding: 1px 5px;
+            margin-top: 8px;
+            font-size: 19px;
+            border-radius: 5px;
+            background-color: rgb(247, 240, 240);
+        }
+        .right-side #message{
+            height: 200px;
+        }
+        .right-side span{
+            color: yellow;
+            font-size: 22px;
+        }
+        .right-side button{
+            margin-top: 20px;
+            background-color: red;
+            width: 90px;
+            height: 36px;
+            color: white;
+            font-size: 20px;
+            border-radius: 7px;
+            margin-left: 180px;
+        }
+
+        .left-side h3 {
+            padding: 10px 22px;
+            color: blue;
+        }
+
+        .left-side p {
+            padding: 5px 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo"><img src="./img/B-logo1.png" alt="" height="60" width="60"><span>Blazon</span></div>
+        <div class="list-item">
+            <ul class="nav-bar">
+                <li class="nav-link"><a href="./Home.html">Home</a></li>
+                <li class="nav-link"><a href="">About</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+                <li class="nav-link"><a href="./Signup.html">Signup </a><span>/</span><a href=""> Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sub-container"></div>
+    <div class="sub-container1">
+        <div class="left-side">
+            <h2>Location Information</h2>
+            <h3>Our Address</h3>
+            <p>121, A1 Colony </p>
+            <p>Opposite Telephone Exchange office</p>
+            <p> Shahjahanpur, Uttar Pradesh</p>
+            <button type="button" style="background-color: rgb(58, 130, 158);">Skype</button>
+            <button type="button" style="background-color: green;">Call</button>
+            <button type="button" style="background-color: red;">Email</button>
+
+        </div>
+        <div class="right-side">
+            <h1>Contact Us</h1>
+            <form action="">
+                <div class="element">
+                    <label for="name">Your Name <span>*</span></label>
+                    <input type="text" id="name">
+                </div>
+                <div class="element">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email">
+                </div>
+                <div class="element">
+                    <label for="message">Message <span>*</span></label>
+                    <input type="text" id="message">
+                </div>
+                <button type="submit" >submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="sub-container"></div>
+
+    <div class="footer">
+        <div class="foot-1">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+        <div class="foot-2">
+            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>CATEGORIES</b></h3>
+            <ul>
+                <li class="link"><a href="#">C</a></li>
+                <li class="link"><a href="#">UI Design</a></li>
+                <li class="link"><a href="#">PHP</a></li>
+                <li class="link"><a href="#">Java</a></li>
+                <li class="link"><a href="#">Android</a></li>
+                <li class="link"><a href="#">Hybrid Apps</a></li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>QUICK LINKS</b></h3>
+            <ul>
+                <li class="link"><a href="#">About Us</a></li>
+                <li class="link"><a href="#">Contact Us</a></li>
+                <li class="link"><a href="#">Contribute</a></li>
+                <li class="link"><a href="#">Privacy Policy</a></li>
+                <li class="link"><a href="#">Sitemap</a></li>
+                <li class="link"><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <p>Copyright &copy; 2020 All Rights Reserved by RNRJ co.</p>
+            <div class="k" style="border-top: 2px solid red; width: 370px; margin: auto;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

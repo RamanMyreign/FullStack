@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .upload-nav {
+            height: 80px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .upload-nav span {
+            font-size: 35px;
+            /* border: 2px solid green; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: blue;
+            position: absolute;
+            top: 13px;
+            /* left: 8px; */
+            margin-left: 10px;
+        }
+
+        body {
+            /* background-image: url(./img/nightview.jpg); */
+            /* background-size: cover; */
+            background-color: rgb(220, 255, 125);
+        }
+
+        .portfolio-header {
+            /* z-index: 10; */
+            height: 260px;
+            width: 70%;
+            margin: auto;
+            color: black;
+            border: 2px solid red;
+            margin-top: 100px;
+            background-color: white;
+            background-color: rgb(46, 33, 33);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .portfolio-header h1,
+        .portfolio-footer h1,
+        .social-media h1 {
+            text-align: center;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .portfolio-header h2,
+        .portfolio-footer h2,
+        .social-media h2 {
+            margin-left: 50px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            color: blue;
+
+        }
+
+        .portfolio-header input,
+        .portfolio-footer input,
+        .social-media input {
+            width: 50%;
+            margin-left: 50px;
+            height: 40px;
+            border-radius: 10px;
+            /* background-color: rgb(224, 206, 206); */
+            border: none;
+            outline: none;
+            margin-right: 30px;
+            font-size: 16px;
+            padding: 3px 8px;
+            font-weight: bold;
+        }
+
+        .portfolio-footer {
+            height: 240px;
+            width: 70%;
+            margin: auto;
+            color: black;
+            border: 2px solid red;
+            margin-top: 100px;
+            background-color: rgb(46, 33, 33);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .portfolio-footer h4 {
+            margin-left: 50px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .social-media {
+            height: 1300px;
+            width: 70%;
+            margin: auto;
+            color: black;
+            border: 2px solid red;
+            margin-top: 100px;
+            background-color: rgb(46, 33, 33);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 80px;
+
+        }
+
+        .social-media .social-link {
+            position: relative;
+        }
+
+        .social-media button,
+        .portfolio-header button,
+        .portfolio-footer button {
+            width: 70px;
+            height: 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-left: 8px;
+            color: white;
+        }
+
+        .social-media h2 {
+            padding-top: 30px;
+            /* margin-bottom: 30px; */
+        }
+
+        .social-media input {
+            margin-bottom: 40px;
+        }
+
+        .social-media #submit,
+        .portfolio-header #submit,
+        .portfolio-footer #submit {
+            background-color: blue;
+        }
+
+        .social-media #reset,
+        .portfolio-header #reset,
+        .portfolio-footer #reset {
+            background-color: red;
+        }
+
+        .social-media .fa-facebook {
+            background-color: blue;
+        }
+
+        .social-media .fa {
+            font-size: 25px;
+            padding: 20px;
+            text-align: center;
+            width: 20px;
+            color: white;
+            border-radius: 55%;
+            margin: 40px 15px;
+            position: absolute;
+            right: 10px;
+            bottom: 0px;
+            /* background-color: rgb(70, 64, 64); */
+            transition: .2s;
+        }
+
+        .social-media .fa-linkedin {
+            background-color: rgb(5, 87, 119);
+        }
+
+        .social-media .fa-twitter {
+            background-color: rgb(50, 160, 204);
+        }
+
+        .social-media .fa-youtube {
+            background-color: rgb(50, 160, 204);
+        }
+
+        .social-media .fa-github {
+            background-color: black;
+        }
+
+        .social-media .fa-youtube-play {
+            background-color: red;
+        }
+
+        .social-media .fa-google-plus {
+            background-color: red;
+        }
+
+        .social-media .fa-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+        }
+        .back-button{
+            position: relative;
+            /* border: 2px solid red; */
+            top: 90px;
+            height: 80px;
+        
+        }
+        .back-button button{
+            width: 90px;
+            height: 40px;
+            position: absolute;
+            right: 230px;
+            background-color: rgb(54, 51, 51);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+        .back-button button a{
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .back-button button:hover{
+            background-color: rgb(211, 9, 9);
+        
+        }
+        .back-button button a:hover{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload-nav">
+        <div class="logo">
+            <img src="../img/B-logo1.png" alt="" height="60" width="60"><span>Blazon</span>
+        </div>
+    </div>
+    <div class="back-button">
+        <div>
+
+            <button type="button"><a href="./home.html">back</a></button>
+        </div>
+    </div>
+    <div class="portfolio-header">
+        <h1>Portfolio Header</h1>
+        <form action="">
+            <h2>Your Name</h2>
+            <div><input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+            </div>
+            <h2>Choose Your Image</h2>
+            <div>
+                <input type="file" name="" id="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="portfolio-footer">
+        <h1>Portfolio Footer</h1>
+        <form action="">
+            <h2>Footer Text</h2>
+            <h4>Choose the text at the footer of your website(e.g copyright notice )</h4>
+            <div><input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="social-media">
+        <h1>Social Media Links</h1>
+        <form action="">
+            <h2>Link to your Facebook</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-facebook"></i>
+            </div>
+            <h2>Link to your LinkdIn</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <h2>Link to your Instagram</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-instagram"></i>
+            </div>
+            <h2>Link to your Github</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-github"></i>
+            </div>
+            <h2>Link to your Google-Plus</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-google-plus"></i>
+
+            </div>
+            <h2>Link to your Twitter</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <h2>Link to your Youtube</h2>
+            <div class="social-link">
+                <input type="text" placeholder="">
+                <button type="submit" id="submit">Save</button>
+                <button type="reset" id="reset">Cancel</button>
+                <i class="fa fa-youtube-play"></i>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

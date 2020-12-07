@@ -9,10 +9,9 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             font-family: Arial, Helvetica, sans-serif;
-
         }
 
         .nav {
@@ -63,6 +62,7 @@
             margin: 16px 20px;
             font-size: 25px;
             padding: 4px 15px;
+            border: none;
             border-top: 2px solid rgb(238, 45, 45);
             border-left: 2px solid red;
 
@@ -80,10 +80,7 @@
             transition: 0.8s;
         }
 
-        body {
-            background-color: blueviolet;
-        }
-
+        /* Footer */
         .footer {
             height: 400px;
             background-color: black;
@@ -180,107 +177,35 @@
             margin: auto;
         }
 
-        /* Signup */
-
-        .sign-up {
-            height: 550px;
-            width: 800px;
-            margin: auto;
-            /* background-image: url('./img/signup1.jfif'); */
-            background-color: black;
-            color: white;
-            margin-bottom: 50px;
-            margin-top: 80px;
-            border-radius: 10px;
-            border-left: 3px solid rgb(177, 161, 161);
-            border-top: 3px solid rgb(172, 156, 156);
-
-
-            /* background-repeat: no-repeat; */
-
-        }
-
-        .sign-up h1 {
-            padding: 15px 0px;
-            font-size: 50px;
-            text-align: center;
-            color: rgb(185, 158, 158);
-            margin-bottom: 30px;
-        }
-
-        .sign-up h3 {
-            color: blue;
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 25px;
-
-        }
-
-        .sign-up form {
+        .about-body {
             display: flex;
-            align-items: center;
             justify-content: center;
             flex-direction: column;
-            /* border: 2px solid red; */
-
+            align-items: center;
+            padding: 30px;
+            background-image: url(../img/about-bg.jpg);
+            background-size: cover;
         }
-
-        .sign-up div input {
-            margin: 14px 10px;
-            height: 30px;
-            width: 400px;
-            font-size: 18px;
-            text-align: center;
-            outline: none;
-            background-color: transparent;
-            border: none;
-            border-bottom: 2px solid rgb(94, 76, 76);
-            color: rgb(197, 145, 145);
+        .about-body h1{
+            margin-top: 20px;
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: rgb(206, 203, 197);
+            /* border-right: 8px solid black;
+            border-bottom: 8px solid black; */
+            padding: 12px;
         }
-
-        .sign-up button {
-            height: 35px;
-            width: 90px;
-            margin: 70px 10px;
-            color: white;
-            font-size: 18px;
-            background-color: green;
-            border-radius: 4px;
-            outline: none;
-            box-shadow: 10px;
+        .about-body h2{
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: blue;
+            font-weight: bold;
         }
-
-        /* signup form validation */
-      
-        .fa-check-circle {
-            color: green;
-            visibility: hidden;
-
+        .about-body p{
+            color: rgb(194, 180, 180);
         }
-
-        .fa-exclamation-circle,
-        small {
-            color: red;
-            visibility: hidden;
-        }
-
-        .form-div.success input {
-            border: 3px solid green;
-        }
-
-        .form-div.form-div.success .fa-check-circle {
-            visibility: visible;
-            color: rgb(27, 158, 27);
-        }
-
-        .form-div.error input {
-            border: 3px solid red;
-        }
-
-        .form-div.form-div.error .fa-exclamation-circle,
-        small {
-            visibility: visible;
-            color: red;
+        .about-body h3{
+            color: rgb(129, 129, 185);
         }
     </style>
 </head>
@@ -291,45 +216,67 @@
         <div class="list-item">
             <ul class="nav-bar">
                 <li class="nav-link"><a href="./home.html">Home</a></li>
-                <li class="nav-link"><a href="">About</a></li>
+                <li class="nav-link"><a href="#">About</a></li>
                 <li class="nav-link"><a href="./contact.html">Contact</a></li>
                 <li class="nav-link"><a href="./signup.html">Signup </a>
                 </li>
                 <li class="nav-link"><a href="./login.html">Login</a></li>
+
             </ul>
         </div>
     </div>
 
-    <div class="sign-up">
-        <h1 class="heading">Register</h1>
-        <h3>Create Account</h3>
-        <form id="signup-form">
-            <div class="form-div">
-                <input type="text" placeholder="Username" id="signup-username">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small></small>
-            </div>
-            <div class="form-div">
-                <input type="password" placeholder="Password" id="signup-password">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small></small>
-            </div>
-            <div class="form-div">
-                <input type="email" placeholder="Email" id="signup-email">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small></small>
-            </div>
-            <div>
-                <input type="text" style="margin-left: 100px;" placeholder="Choose Your portfolio address">@blazon.com
-            </div>
-            <div>
-                <button type="reset" id="reset"><a href="./signup.html">Reset</a> </button>
-                <button type="submit" id="register">Register</button>
-            </div>
-        </form>
+    <div class="about-body">
+        <h1>About Us</h1>
+        <h2>We help the community to become great and do
+            great things.
+        </h2>
+
+        <p class="lead">&nbsp;We are an online tool that believe in making it easy for all the techical geeks and
+            creatives to create an online portfolio so, they can showcase their work online. </p>
+        <p>We believe in creating a better professional environment for people
+            of all backgrounds surrounding us.</p>
+        <p>We believe in providing the space, opportunity and a right platform
+            for creative minds.</p>    
+        <h2>Our Mission</h2> 
+        <p>We are on our way to become the go-to resource for discovering and
+            connecting with developers, designers and creative talent around the globe.</p>
+        <p>&nbsp;Our mission is simple - to become a tool that allows creative
+            minds to showcase their work and talent online through this platform. Whether you're a developer,&nbsp;
+            &nbsp;designer or other type of creative, we request you to join us; this is just the
+            humble beginning of something great. If you have feedback on something we &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do, or even don't do, or if you want us to improve any of the services
+            provided by us, then we want to hear from you. Get in touch, we'd be too happy&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to hear what you have to say!
+        </p>  
+        <h2>Why choose us ?</h2><br>
+        <p>Our platform is free, quick and easy to use - you don't need to be
+            a technical guru or a programming whizz to use it. You can manage your entire online portfolio by yourself
+            using just any web browser. Our site is designed to impress and is perfect for promoting you and your
+            awesome
+            creations and work. Still confused or not convinced yet ? Take a look at our example online portfolio
+            samples
+            or better still go for an another option, sign up for a free account if yet not registered yourself - it
+            will
+            take less than 60 seconds or simply login to your account if already a registered user .
+        </p>
+        <br>
+        <h2>Get to know us</h2>
+        <h3>"Working together toward a common vision."
+        </h3><br>
+        <p>We are a team that firmly believe that teamwork is the ability to
+            work
+            together towards a common vision. We are a team that believes that creative collaboration can happen
+            anywhere
+            and want our team to work where they feel most comfortable and inspired.
+        </p>
+        <br>
+        <h2>Any suggestions or queries ?</h2><br>
+        <p>We're constantly working hard to make our site one of the best tools
+            that exist online for tech geeks and creative minds. If you have any questions or concerns please feel free
+            to <a href="#">get in touch</a> - we would love to hear from you.
+        </p>
+        <br> 
     </div>
 
     <div class="footer">
@@ -366,7 +313,6 @@
             <div class="k" style="border-top: 2px solid red; width: 370px; margin: auto;"></div>
         </div>
     </div>
-    <script src="./blazon.js"></script>
 </body>
 
 </html>

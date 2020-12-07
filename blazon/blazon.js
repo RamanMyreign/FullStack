@@ -25,7 +25,7 @@ function checkInput(){
     }
     else{
         showSuccess(username);
-        x=1;
+        x='1';
     }
     if(email.value === ''){
         showError(email, "Email field can't be blank");
@@ -35,19 +35,25 @@ function checkInput(){
     }
     else{
         showSuccess(email);
-        y=1;
+        y='1';
     }
     if(password1.value.trim() === ''){
         showError(password1, "Password can't be empty");
     }
     else{
         showSuccess(password1);
-        z=1;
+        z='1';
     }
-  
+    if(x=='1' && y=='1' && z=='1'){
+        myFunction()
+    }
+   
 }
 
 
+function myFunction() {
+    location.replace("https://ramanmyreign.github.io/FullStack/blazon/upload.html");
+  }
 
 function showError(input, msg){
   const form_div = input.parentNode;
